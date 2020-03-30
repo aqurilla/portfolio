@@ -11,6 +11,7 @@
     ></script>
   </head>
   <body id="bg-img">
+    <!-- Navbar -->
     <header>
       <div class="menu-btn">
         <div class="btn-line"></div>
@@ -23,37 +24,34 @@
           <div class="portrait"></div>
         </div>
         <ul class="menu-nav">
-          <li class="nav-item current">
-            <a href="index.html" class="nav-link">
+          <li class="nav-item">
+            <a data-scroll href="#" class="nav-link">
               Home
             </a>
           </li>
           <li class="nav-item">
-            <a href="about.html" class="nav-link">
+            <a data-scroll href="#about" class="nav-link">
               About Me
             </a>
           </li>
           <li class="nav-item">
-            <a href="work.html" class="nav-link">
-              My Work
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="contact.html" class="nav-link">
-              How To Reach Me
+            <a data-scroll href="#work" class="nav-link">
+              Projects
             </a>
           </li>
         </ul>
       </nav>
     </header>
 
-    <main id="home">
+    <!-- Home -->
+    <section id="home">
       <h1 class="lg-heading">
         Nitin <span class="text-secondary">Suresh</span>
       </h1>
       <h2 class="sm-heading">
         Front End Engineer <span class="text-secondary">&</span> Web Developer
       </h2>
+      <a href="#work" class="btn-light">View Projects</a>
       <div class="icons">
         <a href="#">
           <i class="fab fa-github fa-2x"></i>
@@ -65,8 +63,137 @@
           <i class="fab fa-facebook fa-2x"></i>
         </a>
       </div>
-    </main>
+    </section>
 
+    <!-- Skills -->
+    <section id="about">
+      <h1 class="lg-heading">About <span class="text-secondary">Me</span></h1>
+      <div class="about-info">
+        <img src="img/portrait.jpg" alt="Nitin Suresh" class="bio-image" />
+
+        <div class="bio">
+          <h3 class="text-secondary">Bio</h3>
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus
+            dolorum, pariatur magnam cupiditate minima asperiores laborum,
+            voluptatum est, nesciunt debitis assumenda maiores quia? Ipsum
+            molestiae vel saepe ab unde rem.
+          </p>
+        </div>
+
+        <div class="job job-1">
+          <h3>Webshop</h3>
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Beatae
+            consectetur, sint iusto autem est harum ab dolorem excepturi maiores
+            qui?
+          </p>
+        </div>
+
+        <div class="job job-2">
+          <h3>Webshop</h3>
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Beatae
+            consectetur, sint iusto autem est harum ab dolorem excepturi maiores
+            qui?
+          </p>
+        </div>
+
+        <div class="job job-3">
+          <h3>Webshop</h3>
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Beatae
+            consectetur, sint iusto autem est harum ab dolorem excepturi maiores
+            qui?
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="work">
+      <h1 class="lg-heading">
+        Project <span class="text-secondary">Portfolio</span>
+      </h1>
+
+      <div class="projects">
+        <div class="item">
+          <a href="#!">
+            <img src="img/projects/project1.jpg" alt="Project" />
+          </a>
+          <a href="#" class="btn-light">
+            <i class="fas fa-eye"></i>
+            Project
+          </a>
+          <a href="#" class="btn-dark">
+            <i class="fab fa-github"></i>
+            Github
+          </a>
+        </div>
+        <div class="item">
+          <a href="#!">
+            <img src="img/projects/project2.jpg" alt="Project" />
+          </a>
+          <a href="#" class="btn-light">
+            <i class="fas fa-eye"></i>
+            Project
+          </a>
+          <a href="#" class="btn-dark">
+            <i class="fab fa-github"></i>
+            Github
+          </a>
+        </div>
+        <div class="item">
+          <a href="#!">
+            <img src="img/projects/project3.jpg" alt="Project" />
+          </a>
+          <a href="#" class="btn-light">
+            <i class="fas fa-eye"></i>
+            Project
+          </a>
+          <a href="#" class="btn-dark">
+            <i class="fab fa-github"></i>
+            Github
+          </a>
+        </div>
+        <div class="item">
+          <a href="#!">
+            <img src="img/projects/project4.jpg" alt="Project" />
+          </a>
+          <a href="#" class="btn-light">
+            <i class="fas fa-eye"></i>
+            Project
+          </a>
+          <a href="#" class="btn-dark">
+            <i class="fab fa-github"></i>
+            Github
+          </a>
+        </div>
+        <div class="item">
+          <a href="#!">
+            <img src="img/projects/project5.jpg" alt="Project" />
+          </a>
+          <a href="#" class="btn-light">
+            <i class="fas fa-eye"></i>
+            Project
+          </a>
+          <a href="#" class="btn-dark">
+            <i class="fab fa-github"></i>
+            Github
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <footer id="main-footer">
+      Copyright &copy; 2020
+    </footer>
+
+    <!-- Scripts -->
     <script src="js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15.0.0/dist/smooth-scroll.polyfills.min.js"></script>
+    <script>
+      var scroll = new SmoothScroll('a[href*="#"]');
+    </script>
   </body>
 </html>
