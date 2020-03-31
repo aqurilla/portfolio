@@ -3,6 +3,8 @@
 
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
@@ -89,9 +91,9 @@ section {
   display: grid;
   gap: 2rem;
   grid-template-areas:
-    'bioimage bio bio'
-    'job1 job2 job3';
-  grid-template-columns: repeat(3, 1fr);
+    'bioimage bioimage bio bio'
+    'job1 job2 job3 job4';
+  grid-template-columns: repeat(4, 1fr);
   margin-top: 2rem;
 
   .bio-image {
@@ -118,10 +120,39 @@ section {
     grid-area: job3;
   }
 
+  .job-4 {
+    grid-area: job4;
+  }
+
   .job {
     background: lighten($primary-color, 5);
-    padding: 0.5rem;
     border-bottom: $secondary-color 5px solid;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+
+    i {
+      padding: 1rem 0rem;
+      color: $secondary-color;
+    }
+
+    h3 {
+      // width: 100%;
+      text-align: center;
+      font-size: 1.5rem;
+      border-bottom: #fff 1px solid;
+    }
+
+    ul {
+      padding: 1rem 0rem;
+    }
+
+    li {
+      list-style-type: none;
+      text-align: center;
+      font-size: 1.25rem;
+    }
   }
 }
 
