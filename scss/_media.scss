@@ -1,14 +1,23 @@
 // Widescreen
 @include mediaXl {
-  .projects {
+  .project-content {
     grid-template-columns: repeat(3, 1fr);
   }
 }
 
 // Laptop
 @include mediaLg {
-  .projects {
-    grid-template-columns: repeat(3, 1fr);
+  .about-info {
+    grid-template-areas:
+      'icons bio'
+      'job1 job2'
+      'job3 job4';
+
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .project-content {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
@@ -46,7 +55,7 @@
     transform: translate3d(100%, 0, 0);
 
     .portrait {
-      background: url(../img/portrait_small.jpg);
+      // background: url(../img/portrait_small.jpg);
       width: 150px;
       height: 150px;
     }
@@ -54,7 +63,7 @@
 
   .about-info {
     grid-template-areas:
-      'bioimage'
+      'icons'
       'bio'
       'job1'
       'job2'
@@ -64,8 +73,8 @@
     grid-template-columns: 1fr;
   }
 
-  .projects {
-    grid-template-columns: repeat(2, 1fr);
+  .project-content {
+    grid-template-columns: 1fr;
   }
 }
 
@@ -75,7 +84,7 @@
     margin-top: 5vh;
   }
 
-  .projects {
+  .project-content {
     grid-template-columns: 1fr;
   }
 }
