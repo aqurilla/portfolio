@@ -35,7 +35,8 @@ h3 {
   &.sm-heading {
     margin-bottom: 2rem;
     padding: 0.2rem 1rem;
-    background: rgba(lighten($primary-color, 5), 0.5);
+
+    // background: rgba(lighten($primary-color, 5), 0.7);
   }
 }
 
@@ -81,16 +82,37 @@ section {
 
   align-items: center;
   justify-content: center;
+
+  h1,
+  h2,
+  h3 {
+    text-align: center;
+
+    &.lg-heading {
+      padding: 1rem;
+      background: rgba(lighten($primary-color, 5), 0.8);
+      border-radius: 10px;
+    }
+
+    &.sm-heading {
+      padding: 1rem;
+      border-radius: 10px;
+      background: rgba(lighten($primary-color, 5), 0.8);
+    }
+  }
 }
+
+// Skills section
 
 #about {
   display: flex;
   width: 100%;
+  // max-width: 800px;
   flex-direction: column;
   align-items: center;
-  background: #333;
-  // background: url(../img/backgrounds/trianglify.png) no-repeat;
-  // background-size: cover;
+  // background: #333;
+  background: url(../img/backgrounds/black_compute.png) no-repeat;
+  background-size: cover;
 
   .bio {
     background-color: #333;
@@ -107,6 +129,7 @@ section {
     'job1 job2 job3 job4';
   grid-template-columns: repeat(4, 1fr);
   margin-top: 2rem;
+  justify-items: center;
 
   .icons {
     grid-area: icons;
@@ -156,7 +179,8 @@ section {
     flex-direction: column;
     align-items: center;
     border-radius: 10px;
-    width: 100%;
+    width: 250px;
+    margin-top: 20px;
 
     i {
       padding: 1rem 0rem;
@@ -182,33 +206,31 @@ section {
   }
 }
 
-// Projects
+// #work {
+//   display: flex;
+//   width: 100%;
+//   flex-direction: column;
+//   align-items: center;
+//   background: #444;
+// }
 
-#work {
-  display: flex;
-  width: 100%;
-  flex-direction: column;
-  align-items: center;
-  background: #444;
-}
+// .projects {
+//   display: grid;
+//   grid-template-columns: repeat(3, 1fr);
+//   gap: 1rem;
+//   margin-top: 2rem;
 
-.projects {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1rem;
-  margin-top: 2rem;
+//   img {
+//     width: 100%;
+//     border: 3px #fff solid;
 
-  img {
-    width: 100%;
-    border: 3px #fff solid;
-
-    &:hover {
-      opacity: 0.9;
-      border-color: $secondary-color;
-      @include easeOut;
-    }
-  }
-}
+//     &:hover {
+//       opacity: 0.9;
+//       border-color: $secondary-color;
+//       @include easeOut;
+//     }
+//   }
+// }
 
 // Projects section
 #projects {
@@ -404,7 +426,7 @@ section {
   padding: 1rem;
   background: darken($primary-color, 10);
   color: set-text-color($primary-color);
-  height: 60px;
+  // height: 60px;
 }
 
 @import 'media';

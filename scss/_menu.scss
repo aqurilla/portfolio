@@ -62,7 +62,7 @@
   &-nav {
     margin: 0;
     padding: 0;
-    background: rgba(darken($primary-color, 10), $background-opacity);
+    background: rgba(darken($primary-color, 10), 0.9);
     list-style: none;
     transform: translate3d(0, -100%, 0);
     @include easeOut;
@@ -73,7 +73,7 @@
   }
 
   &-branding {
-    background: rgba($primary-color, $background-opacity);
+    background: rgba($primary-color, 0.9);
     transform: translate3d(0, 100%, 0);
     @include easeOut;
 
