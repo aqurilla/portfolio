@@ -1,0 +1,43 @@
+// Buttons
+.btn-default {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border: 0;
+  margin-bottom: 0.3rem;
+  border-radius: 8px;
+  width: 150px;
+  text-align: center;
+}
+
+.btn {
+  @extend .btn-default;
+
+  &:hover {
+    background: $secondary-color;
+    color: set-text-color($secondary-color);
+    @include easeOut;
+  }
+}
+
+.btn-dark {
+  @extend .btn;
+  background: darken($primary-color, 50);
+  color: #fff;
+}
+
+.btn-light {
+  @extend .btn;
+  background: lighten($secondary-color, 50);
+  color: #333;
+}
+
+.btn-project {
+  @extend .btn-default;
+  background: darken($primary-color, 50);
+  border-radius: 15px;
+  &:hover {
+    transform: scale(1.05);
+    box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.2);
+    transition: all 0.1s ease-out;
+  }
+}

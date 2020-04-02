@@ -1,6 +1,7 @@
 @import 'config';
 @import 'menu';
 @import 'flipcard';
+@import 'button';
 
 * {
   box-sizing: border-box;
@@ -166,7 +167,8 @@ section {
 
   .bio {
     grid-area: bio;
-    font-size: 1.5rem;
+    font-size: 1.25rem;
+    text-align: left;
   }
 
   .job-1 {
@@ -204,7 +206,7 @@ section {
     h3 {
       // width: 100%;
       text-align: center;
-      font-size: 1.5rem;
+      font-size: 1.25rem;
       border-bottom: #fff 1px solid;
     }
 
@@ -215,7 +217,7 @@ section {
     li {
       list-style-type: none;
       text-align: center;
-      font-size: 1.25rem;
+      // font-size: 1.15rem;
     }
   }
 }
@@ -248,6 +250,10 @@ section {
   justify-items: center;
   align-items: center;
   gap: 2rem;
+
+  .back-title {
+    visibility: hidden;
+  }
 }
 
 .project2 {
@@ -278,54 +284,12 @@ section {
   }
 }
 
-// Buttons
-.btn-default {
-  display: inline-block;
-  padding: 0.5rem 1rem;
-  border: 0;
-  margin-bottom: 0.3rem;
-  border-radius: 8px;
-  width: 150px;
-  text-align: center;
-}
-
-.btn {
-  @extend .btn-default;
-
-  &:hover {
-    background: $secondary-color;
-    color: set-text-color($secondary-color);
-    @include easeOut;
-  }
-}
-
-.btn-dark {
-  @extend .btn;
-  background: darken($primary-color, 50);
-  color: #fff;
-}
-
-.btn-light {
-  @extend .btn;
-  background: lighten($secondary-color, 50);
-  color: #333;
-}
-
-.btn-project {
-  @extend .btn-default;
-  background: darken($primary-color, 50);
-  border-radius: 15px;
-  &:hover {
-    transform: scale(1.05);
-    box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.2);
-    transition: all 0.1s ease-out;
-  }
-}
-
+// Footer
 #main-footer {
   text-align: center;
   padding: 1rem;
-  background: darken($primary-color, 10);
+  // background: lighten($primary-color, 5);
+  background: rgb(90, 90, 90);
   color: set-text-color($primary-color);
 }
 
