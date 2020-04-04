@@ -96,6 +96,14 @@
   }
 
   @include mobileFlip;
+
+  .footer-content {
+    flex-direction: column;
+
+    .image-attribution {
+      margin-top: 15px;
+    }
+  }
 }
 
 // Mobile
